@@ -1,0 +1,23 @@
+[project]
+name = "changelogsmith"
+version = "0.1.0"
+description = "Generate useful CHANGELOG.md automatically from Git history"
+requires-python = ">=3.10"
+dependencies = [
+  "rich>=13.0",
+  "toml>=0.10",
+]
+
+[project.scripts]
+changelogsmith = "changelogsmith.cli:main"
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["changelogsmith*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

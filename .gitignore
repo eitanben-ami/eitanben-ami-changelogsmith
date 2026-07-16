@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*$py.class
+.venv/
+dist/
+build/
+*.egg-info/
+.eggs/
+*.db
+coverage.xml
+.coverage
+htmlcov/
+.mypy_cache/
+.pdm.toml
+.pdm-python
+.pdm-build/
+*.env
+.env.*
+AGENTS.md
+CLAUDE.md
+.DS_Store
+Thumbs.db
