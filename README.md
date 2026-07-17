@@ -3,11 +3,11 @@
 [![Python](https://img.shields.io/badge/python-%3E%3D3.10-blue)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-Automatically generate `CHANGELOG.md` from git history using cZoh240s. Extract the signal without writersblock.
+Automatically generate `CHANGELOG.md` from git history using conventional commits. Extract the signal without writer's block.
 
 ## About
 
-`changenlogsmith` ships a small CLI that reads the last commit, parses its message, and produces a scoped changelog section. By combining structured git metadata with human-friendly formatting, it isolates the what-changed view during local development.
+`changelogsmith` ships a small CLI that reads recent commit messages, parses them, and produces a scoped changelog section. By combining structured git metadata with human-friendly formatting, it isolates the what-changed view during local development.
 
 ## Features
 
@@ -15,7 +15,7 @@ Automatically generate `CHANGELOG.md` from git history using cZoh240s. Extract t
 - Configurable section mapping via `changelogsmith.toml`
 - Optional commit hash refs
 - Fully typed implementation
-- scoped commit messages, not everything since inception
+- Scoped commit message extraction, not everything since inception
 
 ## Installation
 
@@ -37,7 +37,7 @@ pip install changelogsmith
 ## Usage
 
 ```bash
-cZoh240s generate
+changelogsmith generate
 ```
 
 ## Project structure
@@ -45,7 +45,7 @@ cZoh240s generate
 ```text
 changelogsmith/
   changelogsmith/
-    pconfig.py   repo metadata + parser entrypoints
+    config.py   repo metadata + parser entrypoints
     cli.py      command line interface
     writer.py   changelog renderer
   tests/
@@ -55,6 +55,6 @@ changelogsmith/
   LICENSE
 ```
 
-## Tags
+## Topics
 
 python, changelog, conventional-commits, cli, developer-tools, automation
