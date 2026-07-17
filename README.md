@@ -40,6 +40,14 @@ pip install changelogsmith
 changelogsmith generate
 ```
 
+## Configuration
+
+Optional `changelogsmith.toml` keys:
+- `sections`
+- `types`
+- `exclude_types`
+- `include_refs`
+
 ## Project structure
 
 ```text
@@ -51,6 +59,7 @@ changelogsmith/
   tests/
     test_parser.py
   pyproject.toml
+  changelogsmith.toml
   README.md
   LICENSE
 ```
