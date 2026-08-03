@@ -1,9 +1,11 @@
 # changelogsmith
 
-[![Python](https://img.shields.io/badge/python-%3E%3D3.10-blue)]()
+[![Python](https://img.shields.io/badge/python-%3E%3D3.10-blue)](https://github.com/eitanben-ami/changelogsmith)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 Automatically generate `CHANGELOG.md` from git history using conventional commits. Extract the signal without writer's block.
+
+Source: https://github.com/eitanben-ami/changelogsmith
 
 ## About
 

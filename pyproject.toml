@@ -8,6 +8,9 @@ dependencies = [
   "toml>=0.10",
 ]
 
+[project.urls]
+Repository = "https://github.com/eitanben-ami/changelogsmith"
+
 [project.scripts]
 changelogsmith = "changelogsmith.cli:main"
 
