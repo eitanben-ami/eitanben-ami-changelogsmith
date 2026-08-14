@@ -24,7 +24,6 @@ Source: https://github.com/eitanben-ami/changelogsmith
 ### From source
 
 ```bash
-cd changelogsmith
 python -m venv .venv
 source .venv/bin/activate
 pip install -e '.[dev]'
@@ -54,16 +53,15 @@ Optional `changelogsmith.toml` keys:
 
 ```text
 changelogsmith/
-  changelogsmith/
-    config.py   repo metadata + parser entrypoints
-    cli.py      command line interface
-    writer.py   changelog renderer
-  tests/
-    test_parser.py
-  pyproject.toml
-  changelogsmith.toml
-  README.md
-  LICENSE
+  config.py   repo metadata + parser entrypoints
+  cli.py      command line interface
+  writer.py   changelog renderer
+tests/
+  test_parser.py
+pyproject.toml
+changelogsmith.toml
+README.md
+LICENSE
 ```
 
 ## Topics
