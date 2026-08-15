@@ -153,7 +153,7 @@ def _search_up(start: Path) -> Path | None:
 
 
 def iter_commits(since: str) -> Iterator[str]:
-    delimiter = "\0"
+    delimiter = "%x00"
     format_line = f"%h{delimiter}%an{delimiter}%ad{delimiter}%s{delimiter}%b{delimiter}"
     command = ["git", "log", f"{since}..", f"--format={format_line}"]
     try:
@@ -161,7 +161,8 @@ def iter_commits(since: str) -> Iterator[str]:
     except RuntimeError as exc:
         raise RuntimeError(f"Failed to run git log: {exc}") from exc
 
-    for chunk in stream.split(delimiter):
+    decoded = stream.replace(delimiter, "\x00")
+    for chunk in decoded.split("\x00"):
         lines = chunk.splitlines()
         if len(lines) < 3:
             continue
@@ -169,7 +170,7 @@ def iter_commits(since: str) -> Iterator[str]:
         author, date = lines[0], lines[1]
         subject = lines[2] if len(lines) > 2 else ""
         body = "\n".join(lines[3:]) if len(lines) > 3 else ""
-        yield delimiter.join([hash_, author, date, subject, body]) + delimiter
+        yield "\x00".join([hash_, author, date, subject, body]) + "\x00"
 
 
 def _run_command(command: list[str]) -> str:

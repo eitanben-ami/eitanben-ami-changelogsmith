@@ -1,11 +1,11 @@
-from __future__ import annotations
+from changelogsmith.config import ChangelogConfig, CommitMessage, build_section_tree, find_config, load_config, render_tree
+from changelogsmith.parser import iter_commits, should_include
+
 
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Sequence
 
-from changelogsmith.config import ChangelogConfig, CommitMessage, find_config, load_config, render_tree
-from changelogsmith.parser import iter_commits, should_include
 
 
 def collect_entries(since: str, config_path: str) -> tuple[ChangelogConfig, list[CommitMessage]]:
