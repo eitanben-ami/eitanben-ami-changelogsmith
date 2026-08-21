@@ -1,1 +1,5 @@
 [changelogsmith]
+sections = { feat = "Features", fix = "Bug Fixes", docs = "Documentation", refactor = "Refactoring", perf = "Performance", test = "Tests", build = "Build", ci = "CI", chore = "Chores", revert = "Reverts" }
+types = []
+exclude_types = []
+include_refs = true
