@@ -12,12 +12,19 @@ coverage.xml
 .coverage
 htmlcov/
 .mypy_cache/
-.pdm.toml
-.pdm-python
-.pdm-build/
+.pytest_cache/
+.nyc_output
+.hypothesis
+*.log
+.cache
 *.env
 .env.*
-AGENTS.md
-CLAUDE.md
+
+# Node/JS
+node_modules/
+
+# OS/editor metadata
 .DS_Store
 Thumbs.db
+.idea/
+.vscode/
