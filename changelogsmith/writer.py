@@ -1,9 +1,8 @@
-from changelogsmith.config import ChangelogConfig, CommitMessage, build_section_tree, find_config, load_config, render_tree
+from changelogsmith.config import ChangelogConfig, CommitMessage, build_section_tree, load_config, render_tree
 from changelogsmith.parser import iter_commits, should_include
 
 
 from datetime import datetime, timezone
-from pathlib import Path
 from typing import Sequence
 
 
@@ -34,13 +33,13 @@ def write_changelog(
     tag_text = version_tag or date_text
 
     body_parts = [
-        f"# Changelog",
-        f"",
-        f"All notable changes to this project will be documented in this file.",
-        f"",
+        "# Changelog",
+        "",
+        "All notable changes to this project will be documented in this file.",
+        "",
         f"## [{tag_text}] - {date_text}",
-        f"",
+        "",
         render_tree(build_section_tree(list(entries), config), config),
-        f"",
+        "",
     ]
     return "\n".join(body_parts)

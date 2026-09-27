@@ -1,6 +1,4 @@
-import pytest
 
-from changelogsmith.config import find_config, load_config, DEFAULT_CONFIG_FILE
 from changelogsmith.parser import (
     DEFAULT_SECTION_MAP,
     CONVENTIONAL_COMMIT_RE,
@@ -9,7 +7,6 @@ from changelogsmith.parser import (
     Entry,
     build_section_tree,
     format_entry,
-    iter_commits,
     render_tree,
     should_include,
 )

@@ -10,7 +10,6 @@ def main() -> int:
     if str(root) not in sys.path:
         sys.path.insert(0, str(root))
 
-    from changelogsmith.config import find_config, load_config
     from changelogsmith.writer import collect_entries, write_changelog
 
     config_path = str(root / "changelogsmith" / "changelogsmith.toml")
