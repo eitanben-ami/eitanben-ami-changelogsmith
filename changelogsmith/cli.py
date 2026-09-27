@@ -6,13 +6,13 @@ from pathlib import Path
 
 def main() -> int:
     base = "HEAD~1"
-    root = Path(__file__).resolve().parent.parent.parent.parent
+    root = Path(__file__).resolve().parent.parent
     if str(root) not in sys.path:
         sys.path.insert(0, str(root))
 
     from changelogsmith.writer import collect_entries, write_changelog
 
-    config_path = str(root / "changelogsmith" / "changelogsmith.toml")
+    config_path = str(root / "changelogsmith.toml")
     output = root / "CHANGELOG.md"
 
     config, entries = collect_entries(base, config_path)
