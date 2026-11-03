@@ -52,18 +52,22 @@ Optional `changelogsmith.toml` keys:
 ## Project structure
 
 ```text
-changelogsmith/
-  config.py   repo metadata + parser entrypoints
-  cli.py      command line interface
-  writer.py   changelog renderer
-tests/
-  test_parser.py
-pyproject.toml
-changelogsmith.toml
-README.md
-LICENSE
+  .github/workflows/tests.yml
+  .gitignore
+  LICENSE
+  README.md
+  changelogsmith.toml
+  changelogsmith/__main__.py
+  changelogsmith/cli.py
+  changelogsmith/config.py
+  changelogsmith/parser.py
+  changelogsmith/writer.py
+  docs/TODO.md
+  pyproject.toml
+  tests/test_parser.py
 ```
+
 
 ## Topics
 
-python, changelog, conventional-commits, cli, developer-tools, automation
+python, changelog, conventional-commits, cli, developer-tools, automation, git
